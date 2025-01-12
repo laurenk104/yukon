@@ -77,6 +77,12 @@ const rooms = {
         x: 400,
         y: 680
     },
+	340: {
+        key: 'Stage',
+        scene: require('@rooms/stage/Stage').default,
+        x: 240,
+        y: 660
+    },
     321: {
         key: 'DojoExt',
         scene: require('@rooms/dojoext/DojoExt').default,
