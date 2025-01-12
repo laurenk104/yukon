@@ -77,7 +77,7 @@ const rooms = {
         x: 400,
         y: 680
     },
-	340: {
+    340: {
         key: 'Stage',
         scene: require('@rooms/stage/Stage').default,
         x: 240,
