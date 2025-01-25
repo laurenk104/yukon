@@ -1,5 +1,5 @@
 {
-    "id": "7213fa35-3e3a-4f09-bc9e-5b18f352f644",
+    "id": "2d35814a-b1cc-4fb3-898a-51ec2bfbb8ad",
     "sceneType": "PREFAB",
     "settings": {
         "compilerInsertSpaces": true,
@@ -23,8 +23,8 @@
             "Button.spriteName": "buy2",
             "Button.callback": "() => this.interface.prompt.showItem(this.item)",
             "texture": {
-                "key": "clothingcatalog",
-                "frame": "buy2"
+                "key": "costume",
+                "frame": "tag1"
             },
             "originX": 0,
             "originY": 0
@@ -35,7 +35,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 4
     },
     "prefabProperties": [
         {

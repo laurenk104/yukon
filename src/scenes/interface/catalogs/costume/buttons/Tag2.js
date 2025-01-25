@@ -8,7 +8,7 @@ import { Button } from '@components/components'
 export default class Tag2 extends BaseImage {
 
     constructor(scene, x, y, texture, frame) {
-        super(scene, x ?? 0, y ?? 0, texture || "clothingcatalog", frame ?? "buy2");
+        super(scene, x ?? 0, y ?? 0, texture || "costume", frame ?? "tag1");
 
         /** @type {number} */
         this.item = 0;

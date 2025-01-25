@@ -21,9 +21,9 @@ export default class Stage extends RoomScene {
         /** @type {Phaser.GameObjects.Sprite} */
         this.moon_pizza;
         /** @type {Phaser.GameObjects.Sprite} */
-        this.wave_shark_1;
-        /** @type {Phaser.GameObjects.Sprite} */
         this.wave_shark_2;
+        /** @type {Phaser.GameObjects.Sprite} */
+        this.wave_shark_1;
         /** @type {Phaser.GameObjects.Sprite} */
         this.costumes;
         /** @type {Phaser.GameObjects.Sprite} */
@@ -52,7 +52,7 @@ export default class Stage extends RoomScene {
 
         this.roomTriggers = {
             'plaza': () => this.triggerRoom(300, 840, 500),
-            'costume_trunk': () => this.interface.loadWidget('ClothingCatalog')
+            'costume_trunk': () => this.interface.loadWidget('CostumeTrunk')
         }
         this.music = '31'
         this.roomAnims = true
@@ -73,185 +73,105 @@ export default class Stage extends RoomScene {
         const bg = this.add.image(0, 0, "stage", "bg");
         bg.setOrigin(0, 0);
 
-        // window
-        const window = this.add.image(1142.2, 336.5, "stage", "window");
-        window.setOrigin(0.5, 0.875);
-
-        // bush_5
-        const bush_5 = this.add.image(949.5, 523.1, "stage", "bush_5");
-        bush_5.setOrigin(0.25, 0.7);
-
-        // bush_4
-        const bush_4 = this.add.image(1163.3, 489.3, "stage", "bush_4");
-        bush_4.setOrigin(0.15, 0.75);
-
-        // bush_1
-        const bush_1 = this.add.image(1048, 429.2, "stage", "bush_1");
-        bush_1.setOrigin(0.5, 0.75);
-
-        // bush_2
-        const bush_2 = this.add.image(1063.6, 358.9, "stage", "bush_2");
-        bush_2.setOrigin(0.5, 0.7);
-
-        // bush_3
-        const bush_3 = this.add.image(889.5, 353.6, "stage", "bush_3");
-        bush_3.setOrigin(0.5, 0.7);
-
-        // arch
-        const arch = this.add.image(946.1, 307.4, "stage", "arch");
-        arch.setOrigin(0.5, 0.87);
-
-        // balcony
-        const balcony = this.add.image(1114.6, 103.8, "stage", "balcony");
-        balcony.setOrigin(0.5, -0.325);
-
-        // railing
-        const railing = this.add.image(1107.9, 400.5, "stage", "railing");
-        railing.setOrigin(0.5, 3.75);
-
-        // squid
-        const squid = this.add.image(746.8, 490.1, "stage", "squid");
-        squid.setOrigin(0.5, 0.3);
-
-        // starfish
-        const starfish = this.add.image(691.5, 399.3, "stage", "starfish");
-        starfish.setOrigin(0.5, -0.15);
-
-        // boat
-        const boat = this.add.image(453.9, 317.8, "stage", "boat");
-        boat.setOrigin(0.5, 0.775);
-
-        // proscenium
-        const proscenium = this.add.image(751.6, 497.8, "stage", "proscenium");
-        proscenium.setOrigin(0.5, 0.9725);
-
-        // light_bg_left
-        const light_bg_left = this.add.image(473.4, 298.3, "stage", "light_bg_left");
-        light_bg_left.setOrigin(0.6, 10.5);
-
-        // light_bg_right
-        const light_bg_right = this.add.image(1032.1, 298.3, "stage", "light_bg_right");
-        light_bg_right.setOrigin(0.6, 10.5);
-
-        // lights
-        const lights = this.add.image(320.5, 474.7, "stage", "lights");
-        lights.setOrigin(-0.16, 0.98);
-
-        // chair_left_1
-        const chair_left_1 = this.add.image(144.9, 774.3, "stage", "chair_left_1");
-        chair_left_1.setOrigin(0, 0.8);
-
-        // chair_left_2
-        const chair_left_2 = this.add.image(230.5, 790.4, "stage", "chair_left_2");
-        chair_left_2.setOrigin(0, 0.8);
-
-        // chair_left_3
-        const chair_left_3 = this.add.image(327, 813, "stage", "chair_left_3");
-        chair_left_3.setOrigin(0, 0.85);
-
-        // chair_left_4
-        const chair_left_4 = this.add.image(430.1, 836, "stage", "chair_left_4");
-        chair_left_4.setOrigin(0, 0.9);
-
-        // chair_left_5
-        const chair_left_5 = this.add.image(534.5, 842.9, "stage", "chair_left_5");
-        chair_left_5.setOrigin(0, 0.8);
-
-        // chair_left_6
-        const chair_left_6 = this.add.image(95.2, 869, "stage", "chair_left_6");
-        chair_left_6.setOrigin(0, 0.8);
-
-        // chair_left_7
-        const chair_left_7 = this.add.image(180, 891.7, "stage", "chair_left_7");
-        chair_left_7.setOrigin(0, 0.8);
-
-        // chair_left_8
-        const chair_left_8 = this.add.image(286.1, 906.2, "stage", "chair_left_8");
-        chair_left_8.setOrigin(0, 0.8);
-
-        // chair_left_9
-        const chair_left_9 = this.add.image(402.1, 917.7, "stage", "chair_left_9");
-        chair_left_9.setOrigin(0, 0.8);
-
-        // chair_left_10
-        const chair_left_10 = this.add.image(506.5, 924.5, "stage", "chair_left_10");
-        chair_left_10.setOrigin(0, 0.8);
-
         // cloud_raft
         const cloud_raft = this.add.sprite(388, 168, "stage", "cloud_raft_0001");
         cloud_raft.setOrigin(0.5, 0.675);
 
         // sun_puffle
-        const sun_puffle = this.add.sprite(557.2, 147.7, "stage", "sun_puffle_0001");
+        const sun_puffle = this.add.sprite(557.2, 146.7, "stage", "sun_puffle_0001");
         sun_puffle.setOrigin(0.5, 0.75);
 
         // cloud_beans
-        const cloud_beans = this.add.sprite(702, 106, "stage", "cloud_beans_0001");
+        const cloud_beans = this.add.sprite(702, 105, "stage", "cloud_beans_0001");
         cloud_beans.setOrigin(0.55, 0.665);
 
         // cloud_fish
-        const cloud_fish = this.add.sprite(695, 170, "stage", "cloud_fish_0001");
+        const cloud_fish = this.add.sprite(695, 169, "stage", "cloud_fish_0001");
         cloud_fish.setOrigin(0.4, 0.7);
 
+        // arch
+        const arch = this.add.image(946.1, 301.4, "stage", "arch");
+        arch.setOrigin(0.5, 0.87);
+
+        // balcony
+        const balcony = this.add.image(1114.6, 97.8, "stage", "balcony");
+        balcony.setOrigin(0.5, -0.325);
+
+        // window
+        const window = this.add.image(1142.2, 329.5, "stage", "window");
+        window.setOrigin(0.5, 0.875);
+
         // moon_pizza
-        const moon_pizza = this.add.sprite(945.2, 96.3, "stage", "moon_pizza_0001");
+        const moon_pizza = this.add.sprite(945.2, 95.3, "stage", "moon_pizza_0001");
         moon_pizza.setOrigin(0.6, 0.65);
 
-        // wave_shark_1
-        const wave_shark_1 = this.add.sprite(520, 461, "stage", "wave_shark_1_0001");
-        wave_shark_1.setOrigin(0.5, 0.6);
+        // railing
+        const railing = this.add.image(1107.9, 394.5, "stage", "railing");
+        railing.setOrigin(0.5, 3.75);
 
-        // wave_shark_2
-        const wave_shark_2 = this.add.sprite(496, 386.9, "stage", "wave_shark_2_0001");
-        wave_shark_2.setOrigin(0.5, 0.6);
+        // bush_3
+        const bush_3 = this.add.image(889.5, 346.6, "stage", "bush_3");
+        bush_3.setOrigin(0.5, 0.7);
+
+        // bush_2
+        const bush_2 = this.add.image(1063.6, 349.9, "stage", "bush_2");
+        bush_2.setOrigin(0.5, 0.7);
+
+        // bush_1
+        const bush_1 = this.add.image(1048, 427.2, "stage", "bush_1");
+        bush_1.setOrigin(0.5, 0.75);
+
+        // bush_5
+        const bush_5 = this.add.image(949.5, 512.1, "stage", "bush_5");
+        bush_5.setOrigin(0.25, 0.7);
+
+        // bush_4
+        const bush_4 = this.add.image(1163.3, 479.3, "stage", "bush_4");
+        bush_4.setOrigin(0.15, 0.75);
+
+        // boat
+        const boat = this.add.image(453.9, 313.8, "stage", "boat");
+        boat.setOrigin(0.5, 0.775);
 
         // wave_shark_3_0001
-        const wave_shark_3_0001 = this.add.image(362.1, 334.4, "stage", "wave_shark_3_0001");
+        const wave_shark_3_0001 = this.add.image(362.1, 335.4, "stage", "wave_shark_3_0001");
         wave_shark_3_0001.setOrigin(0.5, 0.6);
 
+        // wave_shark_2
+        const wave_shark_2 = this.add.sprite(496, 385.9, "stage", "wave_shark_2_0001");
+        wave_shark_2.setOrigin(0.5, 0.6);
+
         // wave_shark_4_0001
-        const wave_shark_4_0001 = this.add.image(301.6, 457.7, "stage", "wave_shark_4_0001");
+        const wave_shark_4_0001 = this.add.image(301.6, 454.7, "stage", "wave_shark_4_0001");
         wave_shark_4_0001.setOrigin(0.5, 0.6);
 
-        // chair_right_1
-        const chair_right_1 = this.add.image(1375.5, 775.2, "stage", "chair_right_1");
-        chair_right_1.setOrigin(1, 0.8);
+        // wave_shark_1
+        const wave_shark_1 = this.add.sprite(520, 460, "stage", "wave_shark_1_0001");
+        wave_shark_1.setOrigin(0.5, 0.6);
 
-        // chair_right_2
-        const chair_right_2 = this.add.image(1289.9, 791.3, "stage", "chair_right_2");
-        chair_right_2.setOrigin(1, 0.8);
+        // starfish
+        const starfish = this.add.image(691.5, 392.3, "stage", "starfish");
+        starfish.setOrigin(0.5, -0.15);
 
-        // chair_right_3
-        const chair_right_3 = this.add.image(1193.5, 813.9, "stage", "chair_right_3");
-        chair_right_3.setOrigin(1, 0.85);
+        // squid
+        const squid = this.add.image(746.8, 475.1, "stage", "squid");
+        squid.setOrigin(0.5, 0.3);
 
-        // chair_right_4
-        const chair_right_4 = this.add.image(1090.3, 836.9, "stage", "chair_right_4");
-        chair_right_4.setOrigin(1, 0.9);
+        // light_bg_left
+        const light_bg_left = this.add.image(473.4, 290.3, "stage", "light_bg_left");
+        light_bg_left.setOrigin(0.6, 10.5);
 
-        // chair_right_5
-        const chair_right_5 = this.add.image(985.9, 843.8, "stage", "chair_right_5");
-        chair_right_5.setOrigin(1, 0.8);
+        // light_bg_right
+        const light_bg_right = this.add.image(1032.1, 290.3, "stage", "light_bg_right");
+        light_bg_right.setOrigin(0.6, 10.5);
 
-        // chair_right_6
-        const chair_right_6 = this.add.image(1425.2, 869.9, "stage", "chair_right_6");
-        chair_right_6.setOrigin(1, 0.8);
+        // lights
+        const lights = this.add.image(320.5, 466.7, "stage", "lights");
+        lights.setOrigin(-0.16, 0.98);
 
-        // chair_right_7
-        const chair_right_7 = this.add.image(1340.4, 892.6, "stage", "chair_right_7");
-        chair_right_7.setOrigin(1, 0.8);
-
-        // chair_right_8
-        const chair_right_8 = this.add.image(1234.3, 907.1, "stage", "chair_right_8");
-        chair_right_8.setOrigin(1, 0.8);
-
-        // chair_right_9
-        const chair_right_9 = this.add.image(1118.3, 918.6, "stage", "chair_right_9");
-        chair_right_9.setOrigin(1, 0.8);
-
-        // chair_right_10
-        const chair_right_10 = this.add.image(1013.9, 925.4, "stage", "chair_right_10");
-        chair_right_10.setOrigin(1, 0.8);
+        // proscenium
+        const proscenium = this.add.image(751.6, 492.8, "stage", "proscenium");
+        proscenium.setOrigin(0.5, 0.9725);
 
         // piano
         const piano = this.add.image(743.5, 667.6, "stage", "piano");
@@ -266,94 +186,168 @@ export default class Stage extends RoomScene {
         music_2.setOrigin(0.55, 0.75);
 
         // music_3
-        const music_3 = this.add.image(903.8, 694.9, "stage", "music_3");
+        const music_3 = this.add.image(903.8, 695.9, "stage", "music_3");
         music_3.setOrigin(0.45, 0.75);
 
         // music_4
         const music_4 = this.add.image(1029.8, 673.2, "stage", "music_4");
         music_4.setOrigin(0.45, 0.75);
 
-        // wall_left
-        const wall_left = this.add.image(296, 556.7, "stage", "wall_left");
-        wall_left.setOrigin(0.775, 0.7);
+        // chair_left_1
+        const chair_left_1 = this.add.image(144.9, 760.3, "stage", "chair_left_1");
+        chair_left_1.setOrigin(0, 0.8);
 
-        // wall_right
-        const wall_right = this.add.image(1210.9, 555.3, "stage", "wall_right");
-        wall_right.setOrigin(0.225, 0.7);
+        // chair_left_2
+        const chair_left_2 = this.add.image(230.5, 776.4, "stage", "chair_left_2");
+        chair_left_2.setOrigin(0, 0.8);
 
-        // pillar_right
-        const pillar_right = this.add.image(1421.9, 870.9, "stage", "pillar_right");
-        pillar_right.setOrigin(0.652, 0.925);
+        // chair_left_3
+        const chair_left_3 = this.add.image(327, 799, "stage", "chair_left_3");
+        chair_left_3.setOrigin(0, 0.85);
 
-        // pillar_left
-        const pillar_left = this.add.image(93.2, 871.9, "stage", "pillar_left");
-        pillar_left.setOrigin(0.348, 0.925);
+        // chair_left_4
+        const chair_left_4 = this.add.image(430.1, 822, "stage", "chair_left_4");
+        chair_left_4.setOrigin(0, 0.9);
 
-        // costumes
-        const costumes = this.add.sprite(1270.4, 603.9, "stage", "costumes_0001");
-        costumes.setOrigin(0.1, 0.5);
+        // chair_left_5
+        const chair_left_5 = this.add.image(534.5, 828.9, "stage", "chair_left_5");
+        chair_left_5.setOrigin(0, 0.8);
+
+        // chair_left_6
+        const chair_left_6 = this.add.image(95.2, 855, "stage", "chair_left_6");
+        chair_left_6.setOrigin(0, 0.8);
+
+        // chair_left_7
+        const chair_left_7 = this.add.image(180, 877.7, "stage", "chair_left_7");
+        chair_left_7.setOrigin(0, 0.8);
+
+        // chair_left_8
+        const chair_left_8 = this.add.image(286.1, 892.2, "stage", "chair_left_8");
+        chair_left_8.setOrigin(0, 0.8);
+
+        // chair_left_9
+        const chair_left_9 = this.add.image(402.1, 903.7, "stage", "chair_left_9");
+        chair_left_9.setOrigin(0, 0.8);
+
+        // chair_left_10
+        const chair_left_10 = this.add.image(506.5, 910.5, "stage", "chair_left_10");
+        chair_left_10.setOrigin(0, 0.8);
+
+        // chair_right_1
+        const chair_right_1 = this.add.image(1375.5, 770.2, "stage", "chair_right_1");
+        chair_right_1.setOrigin(1, 0.8);
+
+        // chair_right_2
+        const chair_right_2 = this.add.image(1289.9, 786.3, "stage", "chair_right_2");
+        chair_right_2.setOrigin(1, 0.8);
+
+        // chair_right_3
+        const chair_right_3 = this.add.image(1193.5, 808.9, "stage", "chair_right_3");
+        chair_right_3.setOrigin(1, 0.85);
+
+        // chair_right_4
+        const chair_right_4 = this.add.image(1090.3, 831.9, "stage", "chair_right_4");
+        chair_right_4.setOrigin(1, 0.9);
+
+        // chair_right_5
+        const chair_right_5 = this.add.image(985.9, 838.8, "stage", "chair_right_5");
+        chair_right_5.setOrigin(1, 0.8);
+
+        // chair_right_6
+        const chair_right_6 = this.add.image(1425.2, 864.9, "stage", "chair_right_6");
+        chair_right_6.setOrigin(1, 0.8);
+
+        // chair_right_7
+        const chair_right_7 = this.add.image(1340.4, 887.6, "stage", "chair_right_7");
+        chair_right_7.setOrigin(1, 0.8);
+
+        // chair_right_8
+        const chair_right_8 = this.add.image(1234.3, 902.1, "stage", "chair_right_8");
+        chair_right_8.setOrigin(1, 0.8);
+
+        // chair_right_9
+        const chair_right_9 = this.add.image(1118.3, 913.6, "stage", "chair_right_9");
+        chair_right_9.setOrigin(1, 0.8);
+
+        // chair_right_10
+        const chair_right_10 = this.add.image(1013.9, 920.4, "stage", "chair_right_10");
+        chair_right_10.setOrigin(1, 0.8);
+
+        // shadow_right
+        const shadow_right = this.add.image(1431.5, 248.6, "stage", "shadow_right");
 
         // chair_balcony_right
-        const chair_balcony_right = this.add.image(1350.5, 284.5, "stage", "chair_balcony_right");
+        const chair_balcony_right = this.add.image(1350.5, 289.5, "stage", "chair_balcony_right");
         chair_balcony_right.setOrigin(0.371, 0.78);
 
+        // wall_right
+        const wall_right = this.add.image(1210.9, 561.7, "stage", "wall_right");
+        wall_right.setOrigin(0.225, 0.7);
+
         // chair_right
-        const chair_right = this.add.image(1422.3, 308.8, "stage", "chair_right");
+        const chair_right = this.add.image(1422.3, 312.8, "stage", "chair_right");
         chair_right.setOrigin(0.48, 0.5);
 
         // armrest_right
-        const armrest_right = this.add.image(1441.5, 345.7, "stage", "armrest_right");
+        const armrest_right = this.add.image(1441.5, 350.7, "stage", "armrest_right");
         armrest_right.setOrigin(0.5, 0.7);
 
         // railing_right
-        const railing_right = this.add.image(1397, 714.8, "stage", "railing_right");
+        const railing_right = this.add.image(1397, 716.8, "stage", "railing_right");
         railing_right.setOrigin(0.49, 3.425);
 
+        // costumes
+        const costumes = this.add.sprite(1270.4, 607.9, "stage", "costumes_0001");
+        costumes.setOrigin(0.1, 0.5);
+
+        // pillar_right
+        const pillar_right = this.add.image(1421.9, 873.9, "stage", "pillar_right");
+        pillar_right.setOrigin(0.652, 0.925);
+
+        // shadow_left
+        const shadow_left = this.add.image(82.5, 245.6, "stage", "shadow_left");
+
         // chair_balcony_left
-        const chair_balcony_left = this.add.image(135.1, 282.4, "stage", "chair_balcony_left");
+        const chair_balcony_left = this.add.image(135.1, 281.4, "stage", "chair_balcony_left");
         chair_balcony_left.setOrigin(0.5, 0.76);
 
+        // wall_left
+        const wall_left = this.add.image(296, 558.7, "stage", "wall_left");
+        wall_left.setOrigin(0.775, 0.7);
+
         // chair_left
-        const chair_left = this.add.image(87.1, 308.8, "stage", "chair_left");
+        const chair_left = this.add.image(87.1, 307.8, "stage", "chair_left");
 
         // armrest_left
-        const armrest_left = this.add.image(67.9, 345.7, "stage", "armrest_left");
+        const armrest_left = this.add.image(67.9, 344.7, "stage", "armrest_left");
         armrest_left.setOrigin(0.5, 0.7);
 
         // railing_left
-        const railing_left = this.add.image(111.5, 714.8, "stage", "railing_left");
+        const railing_left = this.add.image(111.5, 713.8, "stage", "railing_left");
         railing_left.setOrigin(0.5, 3.4);
 
-        // shadow_right
-        const shadow_right = this.add.image(1431.5, 244.6, "stage", "shadow_right");
+        // pillar_left
+        const pillar_left = this.add.image(93.2, 872.9, "stage", "pillar_left");
+        pillar_left.setOrigin(0.348, 0.925);
 
-        // shadow_left
-        const shadow_left = this.add.image(82.5, 244.6, "stage", "shadow_left");
+        // door
+        const door = this.add.image(135.6, 583.5, "stage", "door");
+        door.setOrigin(0.62, 0.51);
 
         // wall_light
         const wall_light = this.add.image(73.81679314532195, 662.742366113968, "stage", "wall_light");
         wall_light.setOrigin(0.39511709688694907, 1.3408761053929446);
 
         // light_glow
-        const light_glow = this.add.image(88.32919311523438, 642.8733520507812, "stage", "light_glow");
+        const light_glow = this.add.image(88.32919311523438, 641.8733520507812, "stage", "light_glow");
         light_glow.setOrigin(0.5698682671324484, 1.4889686859581086);
 
         // exit_glow
-        const exit_glow = this.add.image(99.52920095661858, 639.5865378295883, "stage", "exit_glow");
+        const exit_glow = this.add.image(99.52920095661858, 638.5865378295883, "stage", "exit_glow");
         exit_glow.setOrigin(0.548144520208914, 2.6636864427931606);
 
-        // door
-        const door = this.add.image(135.6, 581.5, "stage", "door");
-        door.setOrigin(0.62, 0.51);
-
         // puffle_left
-        const puffle_left = this.add.sprite(125, 397, "stage", "puffle_left_0005");
-        puffle_left.setOrigin(0.4609973898442763, 1.0116770999000901);
-        puffle_left.visible = false;
-
-        // costume_trunk
-        const costume_trunk = this.add.sprite(1340, 1055, "stage", "costume_trunk");
-        costume_trunk.setOrigin(0, 2);
+        const puffle_left = this.add.sprite(132, 355, "stage", "puffle_left_0001");
 
         // switchbox3000
         const switchbox3000 = this.add.container(744.4885476817636, 857.0604983501916);
@@ -399,12 +393,16 @@ export default class Stage extends RoomScene {
         switchbox3000.add(switchbox_7);
 
         // switchbox_8
-        const switchbox_8 = this.add.sprite(-4.3885720958261345, -45.3604861431603, "stage", "switchbox_8_0001");
+        const switchbox_8 = this.add.sprite(-4.3885720958261345, -44.3604861431603, "stage", "switchbox_8_0001");
         switchbox_8.setOrigin(0.5, -0.25);
         switchbox3000.add(switchbox_8);
 
+        // costume_trunk
+        const costume_trunk = this.add.sprite(1340, 1055, "stage", "costume_trunk");
+        costume_trunk.setOrigin(0, 2);
+
         // lists
-        const sort = [window, bush_5, bush_4, bush_2, bush_1, bush_3, arch, balcony, railing, squid, starfish, boat, proscenium, light_bg_left, light_bg_right, lights, chair_left_1, chair_left_2, chair_left_3, chair_left_4, chair_left_5, chair_left_6, chair_left_7, chair_left_8, chair_left_9, chair_left_10, cloud_raft, sun_puffle, cloud_beans, cloud_fish, moon_pizza, wave_shark_4_0001, wave_shark_3_0001, wave_shark_2, wave_shark_1, chair_right_1, chair_right_2, chair_right_3, chair_right_4, chair_right_5, chair_right_6, chair_right_7, chair_right_8, chair_right_9, chair_right_10, piano, music_1, music_2, music_3, music_4, wall_left, wall_right, pillar_right, pillar_left, bg, costumes, chair_balcony_right, chair_right, armrest_right, railing_right, chair_balcony_left, chair_left, armrest_left, railing_left, shadow_right, shadow_left, wall_light, light_glow, exit_glow, door, puffle_left, costume_trunk, switchbox3000];
+        const sort = [window, bush_5, bush_4, bush_2, bush_1, bush_3, arch, balcony, railing, squid, starfish, boat, proscenium, light_bg_left, light_bg_right, lights, chair_left_1, chair_left_2, chair_left_3, chair_left_4, chair_left_5, chair_left_6, chair_left_7, chair_left_8, chair_left_9, chair_left_10, cloud_raft, sun_puffle, cloud_beans, cloud_fish, moon_pizza, wave_shark_4_0001, wave_shark_3_0001, wave_shark_2, wave_shark_1, chair_right_1, chair_right_2, chair_right_3, chair_right_4, chair_right_5, chair_right_6, chair_right_7, chair_right_8, chair_right_9, chair_right_10, piano, music_1, music_2, music_3, music_4, wall_left, wall_right, pillar_right, pillar_left, costumes, chair_balcony_right, chair_right, armrest_right, railing_right, chair_balcony_left, chair_left, armrest_left, railing_left, shadow_right, shadow_left, wall_light, light_glow, exit_glow, door, costume_trunk, switchbox3000, puffle_left];
 
         // costumes (components)
         const costumesSimpleButton = new SimpleButton(costumes);
@@ -423,17 +421,9 @@ export default class Stage extends RoomScene {
         // puffle_left (components)
         const puffle_leftAnimation = new Animation(puffle_left);
         puffle_leftAnimation.key = "puffle_left_";
-        puffle_leftAnimation.start = 5;
         puffle_leftAnimation.end = 80;
         puffle_leftAnimation.repeat = 0;
         puffle_leftAnimation.autoPlay = false;
-
-        // costume_trunk (components)
-        const costume_trunkButton = new Button(costume_trunk);
-        costume_trunkButton.spriteName = "costume_trunk";
-        costume_trunkButton.callback = () => this.interface.loadWidget('CostumeTrunk');
-        costume_trunkButton.activeFrame = false;
-        costume_trunkButton.pixelPerfect = true;
 
         // switchbox_1 (components)
         const switchbox_1Animation = new Animation(switchbox_1);
@@ -516,13 +506,20 @@ export default class Stage extends RoomScene {
         const switchbox_8SimpleButton = new SimpleButton(switchbox_8);
         switchbox_8SimpleButton.callback = () => this.onSwitchbox8();
 
+        // costume_trunk (components)
+        const costume_trunkButton = new Button(costume_trunk);
+        costume_trunkButton.spriteName = "costume_trunk";
+        costume_trunkButton.callback = () => this.interface.loadWidget('CostumeTrunk');
+        costume_trunkButton.activeFrame = false;
+        costume_trunkButton.pixelPerfect = true;
+
         this.cloud_raft = cloud_raft;
         this.sun_puffle = sun_puffle;
         this.cloud_beans = cloud_beans;
         this.cloud_fish = cloud_fish;
         this.moon_pizza = moon_pizza;
-        this.wave_shark_1 = wave_shark_1;
         this.wave_shark_2 = wave_shark_2;
+        this.wave_shark_1 = wave_shark_1;
         this.costumes = costumes;
         this.puffle_left = puffle_left;
         this.switchbox_1 = switchbox_1;
@@ -622,7 +619,6 @@ export default class Stage extends RoomScene {
     }
 
     onSwitchbox5() {
-        this.puffle_left.visible = true;
         this.switchbox_5.__Animation.play()
         this.puffle_left.__Animation.play()
     }
@@ -634,10 +630,10 @@ export default class Stage extends RoomScene {
 
         switch (frame) {
             case '0001':
-                this.wave_shark_2.play('waveToShark2')
+                this.wave_shark_2.play('waveToShark')
                 break
             case '0002':
-                this.wave_shark_2.play('sharkToWave2')
+                this.wave_shark_2.play('sharkToWave')
                 break
             default:
                 break
@@ -669,10 +665,10 @@ export default class Stage extends RoomScene {
 
         switch (frame) {
             case '0001':
-                this.wave_shark_1.play('waveToShark1')
+                this.wave_shark_1.play('waveToShark')
                 break
             case '0002':
-                this.wave_shark_1.play('sharkToWave1')
+                this.wave_shark_1.play('sharkToWave')
                 break
             default:
                 break
