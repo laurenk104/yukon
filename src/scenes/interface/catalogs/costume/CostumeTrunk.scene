@@ -99,13 +99,12 @@
                     "list": [
                         {
                             "type": "Image",
-                            "id": "6aa8f32c-16d6-40fe-92a9-b25f6e38a5ad",
+                            "id": "41c5afe1-d053-47c8-89e1-0bf67ac28ecd",
                             "label": "page_3",
                             "texture": {
                                 "key": "costume",
-                                "frame": "page3"
+                                "frame": "3"
                             },
-                            "y": 1,
                             "originX": 0,
                             "originY": 0
                         },
@@ -260,11 +259,11 @@
                     "list": [
                         {
                             "type": "Image",
-                            "id": "ed592c43-7ed9-4df4-8984-d01d12081bb9",
+                            "id": "472d1f2b-a9cf-4b74-b08f-cd49772d14a0",
                             "label": "page_2",
                             "texture": {
                                 "key": "costume",
-                                "frame": "page2"
+                                "frame": "2"
                             },
                             "originX": 0,
                             "originY": 0
@@ -348,13 +347,12 @@
                     "list": [
                         {
                             "type": "Image",
-                            "id": "85c1a1ac-e8b3-4238-bb58-0ee4239be88f",
+                            "id": "5312cb13-963a-4782-84fc-407958360b9c",
                             "label": "page_1",
                             "texture": {
                                 "key": "costume",
-                                "frame": "page1"
+                                "frame": "1"
                             },
-                            "y": -1,
                             "originX": 0,
                             "originY": 0
                         },

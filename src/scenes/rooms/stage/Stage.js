@@ -106,27 +106,27 @@ export default class Stage extends RoomScene {
         moon_pizza.setOrigin(0.6, 0.65);
 
         // railing
-        const railing = this.add.image(1107.9, 394.5, "stage", "railing");
+        const railing = this.add.image(1106.9, 392.5, "stage", "railing");
         railing.setOrigin(0.5, 3.75);
 
         // bush_3
-        const bush_3 = this.add.image(889.5, 346.6, "stage", "bush_3");
+        const bush_3 = this.add.image(891, 349, "stage", "bush_3");
         bush_3.setOrigin(0.5, 0.7);
 
         // bush_2
-        const bush_2 = this.add.image(1063.6, 349.9, "stage", "bush_2");
+        const bush_2 = this.add.image(1062, 358, "stage", "bush_2");
         bush_2.setOrigin(0.5, 0.7);
 
         // bush_1
-        const bush_1 = this.add.image(1048, 427.2, "stage", "bush_1");
+        const bush_1 = this.add.image(1051, 428, "stage", "bush_1");
         bush_1.setOrigin(0.5, 0.75);
 
         // bush_5
-        const bush_5 = this.add.image(949.5, 512.1, "stage", "bush_5");
+        const bush_5 = this.add.image(945, 517, "stage", "bush_5");
         bush_5.setOrigin(0.25, 0.7);
 
         // bush_4
-        const bush_4 = this.add.image(1163.3, 479.3, "stage", "bush_4");
+        const bush_4 = this.add.image(1161, 490, "stage", "bush_4");
         bush_4.setOrigin(0.15, 0.75);
 
         // boat
@@ -162,7 +162,7 @@ export default class Stage extends RoomScene {
         light_bg_left.setOrigin(0.6, 10.5);
 
         // light_bg_right
-        const light_bg_right = this.add.image(1032.1, 290.3, "stage", "light_bg_right");
+        const light_bg_right = this.add.image(1032.1, 291.3, "stage", "light_bg_right");
         light_bg_right.setOrigin(0.6, 10.5);
 
         // lights
@@ -293,7 +293,7 @@ export default class Stage extends RoomScene {
         armrest_right.setOrigin(0.5, 0.7);
 
         // railing_right
-        const railing_right = this.add.image(1397, 716.8, "stage", "railing_right");
+        const railing_right = this.add.image(1397, 718.8, "stage", "railing_right");
         railing_right.setOrigin(0.49, 3.425);
 
         // costumes
@@ -323,7 +323,7 @@ export default class Stage extends RoomScene {
         armrest_left.setOrigin(0.5, 0.7);
 
         // railing_left
-        const railing_left = this.add.image(111.5, 713.8, "stage", "railing_left");
+        const railing_left = this.add.image(109.5, 711.8, "stage", "railing_left");
         railing_left.setOrigin(0.5, 3.4);
 
         // pillar_left

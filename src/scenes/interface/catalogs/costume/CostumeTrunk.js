@@ -63,7 +63,7 @@ export default class CostumeTrunk extends BookContainer {
         this.add(page4);
 
         // page_3
-        const page_3 = scene.add.image(0, 1, "costume", "page3");
+        const page_3 = scene.add.image(0, 0, "costume", "3");
         page_3.setOrigin(0, 0);
         page4.add(page_3);
 
@@ -113,7 +113,7 @@ export default class CostumeTrunk extends BookContainer {
         this.add(page3);
 
         // page_2
-        const page_2 = scene.add.image(0, 0, "costume", "page2");
+        const page_2 = scene.add.image(0, 0, "costume", "2");
         page_2.setOrigin(0, 0);
         page3.add(page_2);
 
@@ -139,7 +139,7 @@ export default class CostumeTrunk extends BookContainer {
         this.add(page2);
 
         // page_1
-        const page_1 = scene.add.image(0, -1, "costume", "page1");
+        const page_1 = scene.add.image(0, 0, "costume", "1");
         page_1.setOrigin(0, 0);
         page2.add(page_1);
 
